@@ -1,390 +1,501 @@
-/* ======================================================
+/* =========================================================
    THE WEIGHT OF THE PULPIT
    LANDING PAGE STYLESHEET
 
    Author: Bradley Hobbs
+   Page: index.html
    File: css/landing.css
-====================================================== */
+========================================================= */
 
 
-/* ======================================================
-   ROOT
-====================================================== */
+/* =========================================================
+   ROOT VARIABLES
+========================================================= */
 
 :root {
 
-  --navy: #0b121c;
-  --navy-soft: #131d29;
-  --navy-light: #1d2a38;
+  --navy:
+    #0b1119;
 
-  --gold: #d6ae68;
-  --gold-light: #efd29a;
-  --gold-dark: #9f7437;
+  --navy-deep:
+    #060a10;
 
-  --ivory: #f3eee6;
-  --cream: #e8dfd1;
+  --navy-soft:
+    #131c27;
 
-  --white: #ffffff;
+  --gold:
+    #c9a45c;
 
-  --wood: #3c2115;
-  --wood-dark: #1f110c;
+  --gold-light:
+    #e0c483;
 
-  --text: #2d2b29;
-  --text-soft: #615b55;
+  --gold-dark:
+    #8f6d32;
 
-  --line: rgba(214, 174, 104, 0.35);
+  --ivory:
+    #f4efe6;
 
-  --shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+  --cream:
+    #e8dfd1;
+
+  --warm-gray:
+    #aaa29a;
+
+  --muted:
+    #77716c;
+
+  --brown:
+    #3a2419;
+
+  --brown-soft:
+    #241711;
+
+  --white:
+    #ffffff;
+
+  --border:
+    rgba(201, 164, 92, 0.24);
+
+  --shadow:
+    0 20px 60px rgba(0, 0, 0, 0.35);
 
 }
 
 
-/* ======================================================
-   RESET
-====================================================== */
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
 
 * {
 
-  margin: 0;
-  padding: 0;
+  margin:
+    0;
 
-  box-sizing: border-box;
+  padding:
+    0;
+
+  box-sizing:
+    border-box;
 
 }
 
 
 html {
 
-  scroll-behavior: smooth;
+  scroll-behavior:
+    smooth;
 
 }
 
 
 body {
 
-  background: var(--ivory);
+  background:
+    var(--navy-deep);
 
-  color: var(--text);
+  color:
+    var(--ivory);
 
-  font-family: "Inter", sans-serif;
+  font-family:
+    "Inter",
+    sans-serif;
 
-  line-height: 1.7;
-
-  overflow-x: hidden;
+  line-height:
+    1.7;
 
 }
 
 
 img {
 
-  display: block;
+  display:
+    block;
 
-  max-width: 100%;
+  max-width:
+    100%;
 
 }
 
 
 a {
 
-  color: inherit;
+  color:
+    inherit;
 
-  text-decoration: none;
+  text-decoration:
+    none;
 
 }
 
 
-/* ======================================================
+/* =========================================================
    SITE HEADER
-====================================================== */
+========================================================= */
 
 .site-header {
 
-  width: 100%;
+  width:
+    100%;
 
-  background: var(--navy);
+  background:
+    var(--navy);
 
-  border-bottom: 1px solid rgba(214, 174, 104, 0.25);
+  border-bottom:
+    1px solid var(--border);
 
-  position: relative;
+  position:
+    relative;
 
-  z-index: 100;
+  z-index:
+    1000;
 
 }
 
 
 .nav-container {
 
-  width: min(1200px, 92%);
+  width:
+    min(1200px, 92%);
 
-  margin: 0 auto;
+  margin:
+    0 auto;
 
-  min-height: 88px;
+  min-height:
+    88px;
 
-  display: flex;
+  display:
+    flex;
 
-  align-items: center;
+  align-items:
+    center;
 
-  justify-content: space-between;
+  justify-content:
+    space-between;
 
-  gap: 30px;
+  gap:
+    2rem;
 
 }
 
 
-/* ======================================================
+/* =========================================================
    SITE BRAND
-====================================================== */
+========================================================= */
 
 .site-brand {
 
-  display: flex;
+  display:
+    flex;
 
-  flex-direction: column;
+  flex-direction:
+    column;
 
-  gap: 2px;
+  gap:
+    0.15rem;
 
 }
 
 
 .brand-main {
 
-  color: var(--ivory);
+  font-family:
+    "Cinzel",
+    serif;
 
-  font-family: "Cinzel", serif;
+  font-size:
+    1.05rem;
 
-  font-size: 1.05rem;
+  font-weight:
+    600;
 
-  font-weight: 600;
+  letter-spacing:
+    0.08em;
 
-  letter-spacing: 0.12em;
+  color:
+    var(--gold-light);
 
 }
 
 
 .brand-subtitle {
 
-  color: var(--gold);
+  font-family:
+    "Cormorant Garamond",
+    serif;
 
-  font-family: "Cormorant Garamond", serif;
+  font-size:
+    1rem;
 
-  font-size: 1rem;
+  font-style:
+    italic;
 
-  font-style: italic;
+  color:
+    var(--cream);
 
 }
 
 
-/* ======================================================
+/* =========================================================
    NAVIGATION
-====================================================== */
+========================================================= */
 
 .site-navigation {
 
-  display: flex;
+  display:
+    flex;
 
-  align-items: center;
+  align-items:
+    center;
 
-  gap: 30px;
+  gap:
+    1.75rem;
 
 }
 
 
 .site-navigation a {
 
-  color: rgba(243, 238, 230, 0.8);
+  position:
+    relative;
 
-  font-size: 0.82rem;
+  font-size:
+    0.85rem;
 
-  font-weight: 600;
+  font-weight:
+    500;
 
-  letter-spacing: 0.12em;
+  letter-spacing:
+    0.08em;
 
-  text-transform: uppercase;
+  text-transform:
+    uppercase;
 
-  transition: color 0.25s ease;
+  color:
+    var(--cream);
+
+  transition:
+    color 0.25s ease;
 
 }
 
 
-.site-navigation a:hover,
+.site-navigation a::after {
 
-.site-navigation a[aria-current="page"] {
+  content:
+    "";
 
-  color: var(--gold-light);
+  position:
+    absolute;
+
+  left:
+    0;
+
+  bottom:
+    -0.5rem;
+
+  width:
+    0;
+
+  height:
+    1px;
+
+  background:
+    var(--gold);
+
+  transition:
+    width 0.25s ease;
 
 }
 
 
-/* ======================================================
+.site-navigation a:hover {
+
+  color:
+    var(--gold-light);
+
+}
+
+
+.site-navigation a:hover::after,
+
+.site-navigation a[aria-current="page"]::after {
+
+  width:
+    100%;
+
+}
+
+
+/* =========================================================
    MOBILE MENU BUTTON
-====================================================== */
+========================================================= */
 
 .menu-toggle {
 
-  display: none;
+  display:
+    none;
 
-  width: 42px;
+  width:
+    44px;
 
-  height: 42px;
+  height:
+    44px;
 
-  border: none;
+  background:
+    transparent;
 
-  background: transparent;
+  border:
+    1px solid var(--border);
 
-  cursor: pointer;
+  cursor:
+    pointer;
 
-  flex-direction: column;
+  align-items:
+    center;
 
-  align-items: center;
+  justify-content:
+    center;
 
-  justify-content: center;
+  flex-direction:
+    column;
 
-  gap: 5px;
+  gap:
+    5px;
 
 }
 
 
 .menu-toggle span {
 
-  display: block;
+  display:
+    block;
 
-  width: 24px;
+  width:
+    20px;
 
-  height: 2px;
+  height:
+    1px;
 
-  background: var(--gold-light);
-
-  transition: 0.3s ease;
+  background:
+    var(--gold-light);
 
 }
 
 
-/* ======================================================
+/* =========================================================
    BOOK BANNER
-====================================================== */
+========================================================= */
 
 .book-banner {
 
-  width: 100%;
+  width:
+    100%;
 
-  background: var(--navy);
+  background:
+    var(--navy-deep);
 
-  overflow: hidden;
+  border-bottom:
+    1px solid var(--border);
 
 }
 
 
 .book-banner img {
 
-  width: 100%;
+  width:
+    100%;
 
-  height: auto;
+  height:
+    auto;
 
-  display: block;
+  max-height:
+    760px;
 
-}
+  object-fit:
+    contain;
 
-
-/* ======================================================
-   OPTIONAL BANNER FRAME
-====================================================== */
-
-.book-banner {
-
-  border-bottom: 4px solid var(--gold-dark);
+  margin:
+    0 auto;
 
 }
 
 
-/* ======================================================
-   INTRODUCTION SECTION
-====================================================== */
-
-.introduction-section {
-
-  padding: 100px 20px;
-
-  background:
-
-    linear-gradient(
-      180deg,
-      var(--ivory) 0%,
-      var(--cream) 100%
-    );
-
-}
-
+/* =========================================================
+   GENERAL CONTENT CONTAINER
+========================================================= */
 
 .content-container {
 
-  width: min(850px, 100%);
+  width:
+    min(1000px, 90%);
 
-  margin: 0 auto;
+  margin:
+    0 auto;
+
+}
+
+
+.preview-container {
+
+  width:
+    min(850px, 90%);
+
+  margin:
+    0 auto;
+
+  text-align:
+    center;
 
 }
 
 
-/* ======================================================
-   SECTION HEADING
-====================================================== */
-
-.section-heading {
-
-  text-align: center;
-
-  margin-bottom: 60px;
-
-}
-
+/* =========================================================
+   SECTION EYEBROW
+========================================================= */
 
 .section-eyebrow {
 
-  color: var(--gold-dark);
+  margin-bottom:
+    1rem;
 
-  font-family: "Cinzel", serif;
+  font-family:
+    "Cinzel",
+    serif;
 
-  font-size: 0.78rem;
+  font-size:
+    0.8rem;
 
-  font-weight: 600;
+  font-weight:
+    600;
 
-  letter-spacing: 0.2em;
+  letter-spacing:
+    0.18em;
 
-  text-transform: uppercase;
+  text-transform:
+    uppercase;
 
-  margin-bottom: 18px;
-
-}
-
-
-.section-heading h2 {
-
-  color: var(--navy);
-
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: clamp(2.4rem, 5vw, 4rem);
-
-  font-weight: 600;
-
-  line-height: 1.1;
+  color:
+    var(--gold);
 
 }
 
 
-/* ======================================================
-   DIVIDER
-====================================================== */
+/* =========================================================
+   SECTION DIVIDER
+========================================================= */
 
 .section-divider {
 
-  width: 100px;
+  width:
+    90px;
 
-  height: 2px;
+  height:
+    1px;
 
-  margin: 28px auto 0;
+  margin:
+    1.75rem 0 2.25rem;
 
   background:
-
     linear-gradient(
       90deg,
       transparent,
@@ -395,609 +506,927 @@ a {
 }
 
 
-/* ======================================================
-   INTRODUCTION CONTENT
-====================================================== */
+.preview-container .section-divider {
 
-.introduction-content {
+  margin-left:
+    auto;
 
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: 1.45rem;
-
-  line-height: 1.75;
-
-  color: var(--text);
+  margin-right:
+    auto;
 
 }
 
 
-.introduction-content p {
+/* =========================================================
+   BOOK OVERVIEW
+========================================================= */
 
-  margin-bottom: 28px;
+.book-overview {
+
+  padding:
+    7rem 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--navy),
+      var(--navy-soft)
+    );
 
 }
 
 
-.introduction-content p:first-child {
+.book-overview h1 {
 
-  font-size: 1.8rem;
+  max-width:
+    750px;
 
-  font-weight: 600;
+  font-family:
+    "Cormorant Garamond",
+    serif;
 
-  color: var(--navy);
+  font-size:
+    clamp(2.8rem, 6vw, 4.5rem);
+
+  font-weight:
+    500;
+
+  line-height:
+    1.05;
+
+  color:
+    var(--ivory);
 
 }
 
 
-/* ======================================================
+.book-overview-content {
+
+  max-width:
+    760px;
+
+}
+
+
+.book-overview-content p {
+
+  margin-bottom:
+    1.75rem;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    1.35rem;
+
+  line-height:
+    1.75;
+
+  color:
+    var(--cream);
+
+}
+
+
+.book-overview-content p:first-child {
+
+  font-size:
+    1.8rem;
+
+  color:
+    var(--gold-light);
+
+}
+
+
+/* =========================================================
    FEATURED QUESTION
-====================================================== */
+========================================================= */
 
 .featured-question {
 
-  margin: 50px 0;
+  margin:
+    3rem 0;
 
-  padding: 38px 40px;
+  padding:
+    2.25rem 2.5rem;
 
-  border-top: 1px solid var(--gold);
+  border-top:
+    1px solid var(--gold-dark);
 
-  border-bottom: 1px solid var(--gold);
+  border-bottom:
+    1px solid var(--gold-dark);
 
-  text-align: center;
+  background:
+    rgba(255, 255, 255, 0.025);
 
 }
 
 
 .featured-question p {
 
-  margin: 0;
+  margin:
+    0;
 
-  color: var(--navy);
+  font-family:
+    "Cormorant Garamond",
+    serif;
 
-  font-family: "Cormorant Garamond", serif;
+  font-size:
+    clamp(1.7rem, 4vw, 2.35rem);
 
-  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-style:
+    italic;
 
-  font-style: italic;
+  line-height:
+    1.3;
 
-  font-weight: 600;
+  text-align:
+    center;
 
-  line-height: 1.35;
-
-}
-
-
-.introduction-closing {
-
-  color: var(--navy);
-
-  font-size: 1.75rem;
-
-  font-style: italic;
-
-  text-align: center;
-
-  margin-top: 45px;
+  color:
+    var(--gold-light);
 
 }
 
 
-/* ======================================================
-   STORY PREVIEW
-====================================================== */
+/* =========================================================
+   BOOK ACTIONS
+========================================================= */
 
-.story-preview {
+.book-actions {
 
-  padding: 110px 20px;
+  display:
+    flex;
 
-  background:
+  flex-wrap:
+    wrap;
 
-    linear-gradient(
-      135deg,
-      var(--navy),
-      var(--navy-soft)
-    );
+  gap:
+    1rem;
 
-  color: var(--ivory);
-
-  text-align: center;
+  margin-top:
+    3rem;
 
 }
 
 
-.preview-container {
+/* =========================================================
+   BUTTONS
+========================================================= */
 
-  width: min(850px, 100%);
+.primary-button,
 
-  margin: 0 auto;
-
-}
-
-
-.story-preview .section-eyebrow {
-
-  color: var(--gold-light);
-
-}
-
-
-.story-preview h2 {
-
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: clamp(2.3rem, 5vw, 4.2rem);
-
-  font-weight: 600;
-
-  line-height: 1.15;
-
-  color: var(--ivory);
-
-}
-
-
-.story-preview p {
-
-  width: min(700px, 100%);
-
-  margin: 35px auto 0;
-
-  font-size: 1.05rem;
-
-  color: rgba(243, 238, 230, 0.78);
-
-}
-
-
-/* ======================================================
-   EXPLORE BUTTON
-====================================================== */
+.secondary-button,
 
 .outline-button {
 
-  display: inline-block;
+  display:
+    inline-flex;
 
-  margin-top: 42px;
+  align-items:
+    center;
 
-  padding: 15px 30px;
+  justify-content:
+    center;
 
-  border: 1px solid var(--gold);
+  min-height:
+    52px;
 
-  color: var(--gold-light);
+  padding:
+    0.85rem 1.7rem;
 
-  font-size: 0.8rem;
+  font-size:
+    0.78rem;
 
-  font-weight: 600;
+  font-weight:
+    600;
 
-  letter-spacing: 0.14em;
+  letter-spacing:
+    0.12em;
 
-  text-transform: uppercase;
+  text-transform:
+    uppercase;
 
   transition:
+    all 0.25s ease;
 
-    background 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease;
+}
+
+
+.primary-button {
+
+  background:
+    var(--gold);
+
+  color:
+    var(--navy-deep);
+
+  border:
+    1px solid var(--gold);
+
+}
+
+
+.primary-button:hover {
+
+  background:
+    var(--gold-light);
+
+  border-color:
+    var(--gold-light);
+
+  transform:
+    translateY(-2px);
+
+}
+
+
+.secondary-button {
+
+  border:
+    1px solid var(--gold-dark);
+
+  color:
+    var(--gold-light);
+
+}
+
+
+.secondary-button:hover {
+
+  background:
+    rgba(201, 164, 92, 0.1);
+
+  border-color:
+    var(--gold);
+
+  transform:
+    translateY(-2px);
+
+}
+
+
+.outline-button {
+
+  border:
+    1px solid var(--gold);
+
+  color:
+    var(--gold-light);
 
 }
 
 
 .outline-button:hover {
 
-  background: var(--gold);
+  background:
+    var(--gold);
 
-  color: var(--navy);
+  color:
+    var(--navy-deep);
 
-  transform: translateY(-3px);
+  transform:
+    translateY(-2px);
 
 }
 
 
-/* ======================================================
+/* =========================================================
+   STORY THEMES
+========================================================= */
+
+.story-themes {
+
+  padding:
+    7rem 0;
+
+  background:
+    var(--brown-soft);
+
+  border-top:
+    1px solid var(--border);
+
+  border-bottom:
+    1px solid var(--border);
+
+}
+
+
+.story-themes h2 {
+
+  max-width:
+    700px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(2.5rem, 5vw, 4rem);
+
+  font-weight:
+    500;
+
+  line-height:
+    1.1;
+
+  color:
+    var(--ivory);
+
+}
+
+
+.themes-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap:
+    1.5rem;
+
+  margin-top:
+    3rem;
+
+}
+
+
+/* =========================================================
+   THEME CARD
+========================================================= */
+
+.theme-card {
+
+  padding:
+    2.5rem;
+
+  background:
+    rgba(255, 255, 255, 0.035);
+
+  border:
+    1px solid var(--border);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+
+}
+
+
+.theme-card:hover {
+
+  transform:
+    translateY(-5px);
+
+  border-color:
+    var(--gold-dark);
+
+  background:
+    rgba(255, 255, 255, 0.06);
+
+}
+
+
+.theme-card h3 {
+
+  margin-bottom:
+    1rem;
+
+  font-family:
+    "Cinzel",
+    serif;
+
+  font-size:
+    1.1rem;
+
+  font-weight:
+    600;
+
+  color:
+    var(--gold-light);
+
+}
+
+
+.theme-card p {
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    1.25rem;
+
+  line-height:
+    1.65;
+
+  color:
+    var(--cream);
+
+}
+
+
+/* =========================================================
+   CONTINUE STORY
+========================================================= */
+
+.continue-story {
+
+  padding:
+    7rem 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--navy-soft),
+      var(--navy-deep)
+    );
+
+}
+
+
+.continue-story h2 {
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(2.7rem, 5vw, 4.2rem);
+
+  font-weight:
+    500;
+
+  line-height:
+    1.1;
+
+  color:
+    var(--ivory);
+
+}
+
+
+.continue-story p:not(.section-eyebrow) {
+
+  max-width:
+    700px;
+
+  margin:
+    0 auto 2.5rem;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    1.35rem;
+
+  line-height:
+    1.7;
+
+  color:
+    var(--cream);
+
+}
+
+
+/* =========================================================
    FOOTER
-====================================================== */
+========================================================= */
 
 .site-footer {
 
-  padding: 70px 20px;
+  padding:
+    4rem 0;
 
-  background: var(--wood-dark);
+  background:
+    #05080c;
 
-  border-top: 1px solid rgba(214, 174, 104, 0.25);
-
-  color: var(--cream);
+  border-top:
+    1px solid var(--border);
 
 }
 
 
 .footer-content {
 
-  width: min(1100px, 100%);
+  width:
+    min(1100px, 90%);
 
-  margin: 0 auto;
+  margin:
+    0 auto;
 
-  display: flex;
+  display:
+    flex;
 
-  flex-direction: column;
+  flex-direction:
+    column;
 
-  align-items: center;
+  align-items:
+    center;
 
-  text-align: center;
+  text-align:
+    center;
+
+  gap:
+    1.5rem;
 
 }
 
 
 .footer-brand {
 
-  display: flex;
+  display:
+    flex;
 
-  flex-direction: column;
+  flex-direction:
+    column;
 
-  gap: 8px;
+  gap:
+    0.35rem;
 
 }
 
 
 .footer-brand strong {
 
-  color: var(--gold-light);
+  font-family:
+    "Cinzel",
+    serif;
 
-  font-family: "Cinzel", serif;
+  font-size:
+    1rem;
 
-  font-size: 1rem;
+  letter-spacing:
+    0.1em;
 
-  letter-spacing: 0.1em;
+  color:
+    var(--gold-light);
 
 }
 
 
 .footer-brand span {
 
-  color: rgba(243, 238, 230, 0.7);
+  font-family:
+    "Cormorant Garamond",
+    serif;
 
-  font-family: "Cormorant Garamond", serif;
+  font-size:
+    1.2rem;
 
-  font-size: 1.15rem;
+  font-style:
+    italic;
 
-  font-style: italic;
+  color:
+    var(--cream);
 
 }
 
 
-/* ======================================================
+/* =========================================================
    FOOTER NAVIGATION
-====================================================== */
+========================================================= */
 
-.footer-links {
+.footer-links,
 
-  display: flex;
+.footer-legal {
 
-  flex-wrap: wrap;
+  display:
+    flex;
 
-  justify-content: center;
+  flex-wrap:
+    wrap;
 
-  gap: 20px 28px;
+  justify-content:
+    center;
 
-  margin: 35px 0;
+  gap:
+    1.25rem;
 
 }
 
 
 .footer-links a {
 
-  color: rgba(243, 238, 230, 0.7);
+  font-size:
+    0.75rem;
 
-  font-size: 0.78rem;
+  font-weight:
+    600;
 
-  letter-spacing: 0.08em;
+  letter-spacing:
+    0.1em;
 
-  text-transform: uppercase;
+  text-transform:
+    uppercase;
 
-  transition: color 0.25s ease;
+  color:
+    var(--cream);
+
+  transition:
+    color 0.25s ease;
 
 }
 
 
 .footer-links a:hover {
 
-  color: var(--gold-light);
+  color:
+    var(--gold-light);
 
 }
 
 
-/* ======================================================
-   FOOTER TEXT
-====================================================== */
+.footer-legal {
+
+  padding-top:
+    1rem;
+
+  border-top:
+    1px solid rgba(201, 164, 92, 0.15);
+
+}
+
+
+.footer-legal a {
+
+  font-size:
+    0.78rem;
+
+  color:
+    var(--warm-gray);
+
+  transition:
+    color 0.25s ease;
+
+}
+
+
+.footer-legal a:hover {
+
+  color:
+    var(--gold-light);
+
+}
+
 
 .footer-author {
 
-  color: var(--gold);
+  font-family:
+    "Cormorant Garamond",
+    serif;
 
-  font-family: "Cormorant Garamond", serif;
+  font-size:
+    1.2rem;
 
-  font-size: 1.2rem;
+  font-style:
+    italic;
 
-  margin-bottom: 15px;
+  color:
+    var(--cream);
 
 }
 
 
 .footer-copyright {
 
-  color: rgba(243, 238, 230, 0.5);
+  font-size:
+    0.75rem;
 
-  font-size: 0.78rem;
-
-}
-
-
-/* ======================================================
-   TABLET
-====================================================== */
-
-@media (max-width: 850px) {
-
-
-  .nav-container {
-
-    min-height: 78px;
-
-  }
-
-
-  .site-navigation {
-
-    gap: 20px;
-
-  }
-
-
-  .brand-main {
-
-    font-size: 0.9rem;
-
-  }
-
-
-  .book-banner img {
-
-    min-height: 240px;
-
-    object-fit: cover;
-
-  }
-
-
-  .introduction-section {
-
-    padding: 80px 20px;
-
-  }
-
-
-  .story-preview {
-
-    padding: 85px 20px;
-
-  }
+  color:
+    var(--muted);
 
 }
 
 
-/* ======================================================
-   MOBILE NAVIGATION
-====================================================== */
+/* =========================================================
+   MOBILE
+========================================================= */
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
 
 
   .nav-container {
 
-    position: relative;
+    min-height:
+      76px;
 
   }
 
 
   .menu-toggle {
 
-    display: flex;
+    display:
+      flex;
 
   }
 
 
   .site-navigation {
 
-    position: absolute;
+    display:
+      none;
 
-    top: 100%;
+    position:
+      absolute;
 
-    left: 0;
+    top:
+      100%;
 
-    width: 100%;
+    left:
+      0;
 
-    padding: 25px 20px 30px;
+    width:
+      100%;
 
-    background: var(--navy);
+    padding:
+      1.5rem;
 
-    border-top: 1px solid rgba(214, 174, 104, 0.15);
+    flex-direction:
+      column;
 
-    display: none;
+    align-items:
+      flex-start;
 
-    flex-direction: column;
+    background:
+      var(--navy);
 
-    align-items: center;
-
-    gap: 22px;
+    border-bottom:
+      1px solid var(--border);
 
   }
 
 
   .site-navigation.active {
 
-    display: flex;
+    display:
+      flex;
 
   }
 
 
   .site-navigation a {
 
-    font-size: 0.82rem;
+    width:
+      100%;
+
+    padding:
+      0.75rem 0;
 
   }
 
 
-  .menu-toggle.active span:nth-child(1) {
+  .site-navigation a::after {
 
-    transform:
-      translateY(7px)
-      rotate(45deg);
-
-  }
-
-
-  .menu-toggle.active span:nth-child(2) {
-
-    opacity: 0;
+    display:
+      none;
 
   }
 
 
-  .menu-toggle.active span:nth-child(3) {
+  .book-overview,
 
-    transform:
-      translateY(-7px)
-      rotate(-45deg);
+  .story-themes,
+
+  .continue-story {
+
+    padding:
+      5rem 0;
 
   }
+
+
+  .themes-grid {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+
+  .book-actions {
+
+    flex-direction:
+      column;
+
+    align-items:
+      stretch;
+
+  }
+
+
+  .primary-button,
+
+  .secondary-button {
+
+    width:
+      100%;
+
+  }
+
 
 }
 
 
-/* ======================================================
+/* =========================================================
    SMALL MOBILE
-====================================================== */
+========================================================= */
 
-@media (max-width: 550px) {
+@media (max-width: 500px) {
 
 
   .nav-container {
 
-    width: min(92%, 100%);
+    width:
+      92%;
 
   }
 
 
   .brand-main {
 
-    font-size: 0.78rem;
-
-    letter-spacing: 0.08em;
+    font-size:
+      0.82rem;
 
   }
 
 
   .brand-subtitle {
 
-    font-size: 0.92rem;
-
-  }
-
-
-  .book-banner {
-
-    border-bottom-width: 3px;
+    font-size:
+      0.9rem;
 
   }
 
 
   .book-banner img {
 
-    min-height: auto;
+    width:
+      100%;
 
-    object-fit: contain;
+    min-height:
+      0;
 
-  }
-
-
-  .introduction-section {
-
-    padding: 65px 18px;
+    object-fit:
+      contain;
 
   }
 
 
-  .section-heading {
+  .book-overview h1 {
 
-    margin-bottom: 45px;
-
-  }
-
-
-  .introduction-content {
-
-    font-size: 1.3rem;
-
-    line-height: 1.7;
+    font-size:
+      2.7rem;
 
   }
 
 
-  .introduction-content p:first-child {
+  .book-overview-content p {
 
-    font-size: 1.6rem;
+    font-size:
+      1.2rem;
 
   }
 
 
   .featured-question {
 
-    margin: 40px 0;
-
-    padding: 30px 20px;
+    padding:
+      1.75rem 1.25rem;
 
   }
 
 
   .featured-question p {
 
-    font-size: 1.65rem;
+    font-size:
+      1.65rem;
 
   }
 
 
-  .introduction-closing {
+  .theme-card {
 
-    font-size: 1.5rem;
-
-  }
-
-
-  .story-preview {
-
-    padding: 70px 18px;
+    padding:
+      1.75rem;
 
   }
 
 
-  .story-preview p {
+  .footer-links,
 
-    font-size: 1rem;
+  .footer-legal {
 
-  }
-
-
-  .site-footer {
-
-    padding: 60px 20px;
+    gap:
+      0.9rem 1rem;
 
   }
 
-
-  .footer-links {
-
-    gap: 16px 20px;
-
-  }
 
 }
