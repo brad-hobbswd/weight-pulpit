@@ -1,153 +1,121 @@
-/* =========================================================
+/* ======================================================
    THE WEIGHT OF THE PULPIT
-   LANDING PAGE STYLESHEET
+   MASTER LANDING STYLESHEET
 
-   Author: Bradley Hobbs
-   Page: index.html
-   File: css/landing.css
-========================================================= */
+   Pages:
+   index.html
+   author.html
+   copyright.html
+   terms.html
+   privacy.html
+====================================================== */
 
 
-/* =========================================================
-   ROOT VARIABLES
-========================================================= */
+/* ======================================================
+   ROOT
+====================================================== */
 
 :root {
 
-  --navy:
-    #0b1119;
+  --navy: #15212b;
+  --navy-deep: #0d161d;
+  --slate: #2d3c46;
 
-  --navy-deep:
-    #060a10;
+  --gold: #b99a63;
+  --gold-light: #d6bc87;
 
-  --navy-soft:
-    #131c27;
+  --cream: #f5f1e8;
+  --paper: #fbfaf6;
 
-  --gold:
-    #c9a45c;
+  --warm-gray: #6f6a62;
+  --border: #ddd6c8;
 
-  --gold-light:
-    #e0c483;
-
-  --gold-dark:
-    #8f6d32;
-
-  --ivory:
-    #f4efe6;
-
-  --cream:
-    #e8dfd1;
-
-  --warm-gray:
-    #aaa29a;
-
-  --muted:
-    #77716c;
-
-  --brown:
-    #3a2419;
-
-  --brown-soft:
-    #241711;
-
-  --white:
-    #ffffff;
-
-  --border:
-    rgba(201, 164, 92, 0.24);
+  --white: #ffffff;
 
   --shadow:
-    0 20px 60px rgba(0, 0, 0, 0.35);
+    0 18px 45px rgba(0, 0, 0, 0.10);
 
 }
 
 
-/* =========================================================
-   GLOBAL RESET
-========================================================= */
+/* ======================================================
+   RESET
+====================================================== */
 
 * {
 
-  margin:
-    0;
-
-  padding:
-    0;
-
-  box-sizing:
-    border-box;
+  box-sizing: border-box;
 
 }
 
 
 html {
 
-  scroll-behavior:
-    smooth;
+  scroll-behavior: smooth;
 
 }
 
 
 body {
 
-  background:
-    var(--navy-deep);
+  margin: 0;
 
-  color:
-    var(--ivory);
+  background: var(--paper);
 
-  font-family:
-    "Inter",
-    sans-serif;
+  color: var(--navy);
 
-  line-height:
-    1.7;
+  font-family: "Inter", sans-serif;
 
-}
-
-
-img {
-
-  display:
-    block;
-
-  max-width:
-    100%;
+  line-height: 1.7;
 
 }
 
 
 a {
 
-  color:
-    inherit;
+  color: inherit;
 
-  text-decoration:
-    none;
+  text-decoration: none;
 
 }
 
 
-/* =========================================================
+img {
+
+  display: block;
+
+  max-width: 100%;
+
+}
+
+
+button {
+
+  font: inherit;
+
+}
+
+
+/* ======================================================
    SITE HEADER
-========================================================= */
+====================================================== */
 
 .site-header {
 
-  width:
-    100%;
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
 
   background:
-    var(--navy);
+    rgba(251, 250, 246, 0.97);
 
   border-bottom:
     1px solid var(--border);
 
-  position:
-    relative;
-
-  z-index:
-    1000;
+  backdrop-filter:
+    blur(12px);
 
 }
 
@@ -157,11 +125,11 @@ a {
   width:
     min(1200px, 92%);
 
+  min-height:
+    86px;
+
   margin:
     0 auto;
-
-  min-height:
-    88px;
 
   display:
     flex;
@@ -173,14 +141,14 @@ a {
     space-between;
 
   gap:
-    2rem;
+    30px;
 
 }
 
 
-/* =========================================================
+/* ======================================================
    SITE BRAND
-========================================================= */
+====================================================== */
 
 .site-brand {
 
@@ -191,37 +159,38 @@ a {
     column;
 
   gap:
-    0.15rem;
+    3px;
 
 }
 
 
 .brand-main {
 
+  color:
+    var(--navy);
+
   font-family:
-    "Cinzel",
-    serif;
+    "Cinzel", serif;
 
   font-size:
     1.05rem;
 
   font-weight:
-    600;
+    700;
 
   letter-spacing:
     0.08em;
-
-  color:
-    var(--gold-light);
 
 }
 
 
 .brand-subtitle {
 
+  color:
+    var(--gold);
+
   font-family:
-    "Cormorant Garamond",
-    serif;
+    "Cormorant Garamond", serif;
 
   font-size:
     1rem;
@@ -229,15 +198,12 @@ a {
   font-style:
     italic;
 
-  color:
-    var(--cream);
-
 }
 
 
-/* =========================================================
-   NAVIGATION
-========================================================= */
+/* ======================================================
+   SITE NAVIGATION
+====================================================== */
 
 .site-navigation {
 
@@ -248,7 +214,7 @@ a {
     center;
 
   gap:
-    1.75rem;
+    26px;
 
 }
 
@@ -258,23 +224,28 @@ a {
   position:
     relative;
 
+  color:
+    var(--slate);
+
   font-size:
-    0.85rem;
+    0.86rem;
 
   font-weight:
-    500;
+    600;
 
   letter-spacing:
-    0.08em;
-
-  text-transform:
-    uppercase;
-
-  color:
-    var(--cream);
+    0.04em;
 
   transition:
     color 0.25s ease;
+
+}
+
+
+.site-navigation a:hover {
+
+  color:
+    var(--navy);
 
 }
 
@@ -291,27 +262,19 @@ a {
     0;
 
   bottom:
-    -0.5rem;
+    -8px;
 
   width:
     0;
 
   height:
-    1px;
+    2px;
 
   background:
     var(--gold);
 
   transition:
     width 0.25s ease;
-
-}
-
-
-.site-navigation a:hover {
-
-  color:
-    var(--gold-light);
 
 }
 
@@ -326,9 +289,9 @@ a {
 }
 
 
-/* =========================================================
+/* ======================================================
    MOBILE MENU BUTTON
-========================================================= */
+====================================================== */
 
 .menu-toggle {
 
@@ -341,26 +304,17 @@ a {
   height:
     44px;
 
-  background:
-    transparent;
+  padding:
+    8px;
 
   border:
     1px solid var(--border);
 
+  background:
+    transparent;
+
   cursor:
     pointer;
-
-  align-items:
-    center;
-
-  justify-content:
-    center;
-
-  flex-direction:
-    column;
-
-  gap:
-    5px;
 
 }
 
@@ -371,20 +325,108 @@ a {
     block;
 
   width:
-    20px;
+    100%;
 
   height:
-    1px;
+    2px;
+
+  margin:
+    5px 0;
 
   background:
-    var(--gold-light);
+    var(--navy);
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
 
 }
 
 
-/* =========================================================
+.menu-toggle.active span:nth-child(1) {
+
+  transform:
+    translateY(7px)
+    rotate(45deg);
+
+}
+
+
+.menu-toggle.active span:nth-child(2) {
+
+  opacity:
+    0;
+
+}
+
+
+.menu-toggle.active span:nth-child(3) {
+
+  transform:
+    translateY(-7px)
+    rotate(-45deg);
+
+}
+
+
+/* ======================================================
+   SHARED SECTIONS
+====================================================== */
+
+.section-eyebrow {
+
+  margin:
+    0 0 16px;
+
+  color:
+    var(--gold);
+
+  font-size:
+    0.78rem;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.18em;
+
+  text-transform:
+    uppercase;
+
+}
+
+
+.section-divider {
+
+  width:
+    70px;
+
+  height:
+    2px;
+
+  margin:
+    30px auto;
+
+  background:
+    var(--gold);
+
+}
+
+
+.content-container {
+
+  width:
+    min(1100px, 92%);
+
+  margin:
+    0 auto;
+
+}
+
+
+/* ======================================================
    BOOK BANNER
-========================================================= */
+====================================================== */
 
 .book-banner {
 
@@ -393,9 +435,6 @@ a {
 
   background:
     var(--navy-deep);
-
-  border-bottom:
-    1px solid var(--border);
 
 }
 
@@ -409,7 +448,7 @@ a {
     auto;
 
   max-height:
-    760px;
+    720px;
 
   object-fit:
     contain;
@@ -420,206 +459,117 @@ a {
 }
 
 
-/* =========================================================
-   GENERAL CONTENT CONTAINER
-========================================================= */
-
-.content-container {
-
-  width:
-    min(1000px, 90%);
-
-  margin:
-    0 auto;
-
-}
-
-
-.preview-container {
-
-  width:
-    min(850px, 90%);
-
-  margin:
-    0 auto;
-
-  text-align:
-    center;
-
-}
-
-
-/* =========================================================
-   SECTION EYEBROW
-========================================================= */
-
-.section-eyebrow {
-
-  margin-bottom:
-    1rem;
-
-  font-family:
-    "Cinzel",
-    serif;
-
-  font-size:
-    0.8rem;
-
-  font-weight:
-    600;
-
-  letter-spacing:
-    0.18em;
-
-  text-transform:
-    uppercase;
-
-  color:
-    var(--gold);
-
-}
-
-
-/* =========================================================
-   SECTION DIVIDER
-========================================================= */
-
-.section-divider {
-
-  width:
-    90px;
-
-  height:
-    1px;
-
-  margin:
-    1.75rem 0 2.25rem;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      var(--gold),
-      transparent
-    );
-
-}
-
-
-.preview-container .section-divider {
-
-  margin-left:
-    auto;
-
-  margin-right:
-    auto;
-
-}
-
-
-/* =========================================================
+/* ======================================================
    BOOK OVERVIEW
-========================================================= */
+====================================================== */
 
 .book-overview {
 
   padding:
-    7rem 0;
+    100px 20px;
+
+  text-align:
+    center;
 
   background:
-    linear-gradient(
-      180deg,
-      var(--navy),
-      var(--navy-soft)
-    );
+    var(--paper);
+
+}
+
+
+.book-overview .content-container {
+
+  width:
+    min(850px, 100%);
 
 }
 
 
 .book-overview h1 {
 
-  max-width:
-    750px;
-
-  font-family:
-    "Cormorant Garamond",
-    serif;
-
-  font-size:
-    clamp(2.8rem, 6vw, 4.5rem);
-
-  font-weight:
-    500;
-
-  line-height:
-    1.05;
+  margin:
+    0;
 
   color:
-    var(--ivory);
+    var(--navy);
+
+  font-family:
+    "Cinzel", serif;
+
+  font-size:
+    clamp(2rem, 5vw, 3.8rem);
+
+  font-weight:
+    600;
+
+  line-height:
+    1.25;
 
 }
 
 
 .book-overview-content {
 
-  max-width:
-    760px;
+  color:
+    var(--slate);
+
+  font-family:
+    "Cormorant Garamond", serif;
+
+  font-size:
+    1.35rem;
+
+  line-height:
+    1.8;
+
+  text-align:
+    left;
 
 }
 
 
 .book-overview-content p {
 
-  margin-bottom:
-    1.75rem;
-
-  font-family:
-    "Cormorant Garamond",
-    serif;
-
-  font-size:
-    1.35rem;
-
-  line-height:
-    1.75;
-
-  color:
-    var(--cream);
+  margin:
+    0 0 30px;
 
 }
 
 
 .book-overview-content p:first-child {
 
-  font-size:
-    1.8rem;
-
   color:
-    var(--gold-light);
+    var(--navy);
+
+  font-size:
+    1.65rem;
+
+  font-weight:
+    600;
 
 }
 
 
-/* =========================================================
+/* ======================================================
    FEATURED QUESTION
-========================================================= */
+====================================================== */
 
 .featured-question {
 
   margin:
-    3rem 0;
+    55px 0;
 
   padding:
-    2.25rem 2.5rem;
+    40px;
 
   border-top:
-    1px solid var(--gold-dark);
+    2px solid var(--gold);
 
   border-bottom:
-    1px solid var(--gold-dark);
+    2px solid var(--gold);
 
-  background:
-    rgba(255, 255, 255, 0.025);
+  text-align:
+    center;
 
 }
 
@@ -629,31 +579,27 @@ a {
   margin:
     0;
 
+  color:
+    var(--navy);
+
   font-family:
-    "Cormorant Garamond",
-    serif;
+    "Cormorant Garamond", serif;
 
   font-size:
-    clamp(1.7rem, 4vw, 2.35rem);
+    clamp(1.6rem, 3vw, 2.2rem);
 
   font-style:
     italic;
 
   line-height:
-    1.3;
-
-  text-align:
-    center;
-
-  color:
-    var(--gold-light);
+    1.4;
 
 }
 
 
-/* =========================================================
+/* ======================================================
    BOOK ACTIONS
-========================================================= */
+====================================================== */
 
 .book-actions {
 
@@ -663,18 +609,21 @@ a {
   flex-wrap:
     wrap;
 
+  justify-content:
+    center;
+
   gap:
-    1rem;
+    16px;
 
   margin-top:
-    3rem;
+    50px;
 
 }
 
 
-/* =========================================================
+/* ======================================================
    BUTTONS
-========================================================= */
+====================================================== */
 
 .primary-button,
 
@@ -691,26 +640,32 @@ a {
   justify-content:
     center;
 
-  min-height:
-    52px;
+  min-width:
+    190px;
 
   padding:
-    0.85rem 1.7rem;
+    15px 26px;
+
+  font-family:
+    "Inter", sans-serif;
 
   font-size:
-    0.78rem;
+    0.82rem;
 
   font-weight:
-    600;
+    700;
 
   letter-spacing:
-    0.12em;
+    0.07em;
 
   text-transform:
     uppercase;
 
   transition:
-    all 0.25s ease;
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
 
 }
 
@@ -718,13 +673,13 @@ a {
 .primary-button {
 
   background:
-    var(--gold);
+    var(--navy);
 
   color:
-    var(--navy-deep);
+    var(--white);
 
   border:
-    1px solid var(--gold);
+    1px solid var(--navy);
 
 }
 
@@ -732,108 +687,86 @@ a {
 .primary-button:hover {
 
   background:
-    var(--gold-light);
-
-  border-color:
-    var(--gold-light);
-
-  transform:
-    translateY(-2px);
-
-}
-
-
-.secondary-button {
-
-  border:
-    1px solid var(--gold-dark);
-
-  color:
-    var(--gold-light);
-
-}
-
-
-.secondary-button:hover {
-
-  background:
-    rgba(201, 164, 92, 0.1);
+    var(--gold);
 
   border-color:
     var(--gold);
 
   transform:
-    translateY(-2px);
+    translateY(-3px);
 
 }
 
+
+.secondary-button,
 
 .outline-button {
 
-  border:
-    1px solid var(--gold);
+  background:
+    transparent;
 
   color:
-    var(--gold-light);
+    var(--navy);
+
+  border:
+    1px solid var(--navy);
 
 }
 
+
+.secondary-button:hover,
 
 .outline-button:hover {
 
   background:
-    var(--gold);
+    var(--navy);
 
   color:
-    var(--navy-deep);
+    var(--white);
 
   transform:
-    translateY(-2px);
+    translateY(-3px);
 
 }
 
 
-/* =========================================================
+/* ======================================================
    STORY THEMES
-========================================================= */
+====================================================== */
 
 .story-themes {
 
   padding:
-    7rem 0;
+    100px 20px;
 
   background:
-    var(--brown-soft);
+    var(--cream);
 
-  border-top:
-    1px solid var(--border);
-
-  border-bottom:
-    1px solid var(--border);
+  text-align:
+    center;
 
 }
 
 
 .story-themes h2 {
 
-  max-width:
-    700px;
-
-  font-family:
-    "Cormorant Garamond",
-    serif;
-
-  font-size:
-    clamp(2.5rem, 5vw, 4rem);
-
-  font-weight:
-    500;
-
-  line-height:
-    1.1;
+  margin:
+    0;
 
   color:
-    var(--ivory);
+    var(--navy);
+
+  font-family:
+    "Cinzel", serif;
+
+  font-size:
+    clamp(2rem, 5vw, 3.5rem);
+
+  font-weight:
+    600;
+
+  line-height:
+    1.3;
 
 }
 
@@ -844,68 +777,186 @@ a {
     grid;
 
   grid-template-columns:
-    repeat(2, minmax(0, 1fr));
+    repeat(4, 1fr);
 
   gap:
-    1.5rem;
+    24px;
 
   margin-top:
-    3rem;
+    55px;
 
 }
 
-
-/* =========================================================
-   THEME CARD
-========================================================= */
 
 .theme-card {
 
   padding:
-    2.5rem;
+    35px 28px;
 
   background:
-    rgba(255, 255, 255, 0.035);
+    var(--white);
 
   border:
     1px solid var(--border);
 
-  transition:
-    transform 0.25s ease,
-    border-color 0.25s ease,
-    background 0.25s ease;
+  box-shadow:
+    var(--shadow);
 
-}
-
-
-.theme-card:hover {
-
-  transform:
-    translateY(-5px);
-
-  border-color:
-    var(--gold-dark);
-
-  background:
-    rgba(255, 255, 255, 0.06);
+  text-align:
+    left;
 
 }
 
 
 .theme-card h3 {
 
-  margin-bottom:
-    1rem;
+  margin:
+    0 0 15px;
+
+  color:
+    var(--navy);
 
   font-family:
-    "Cinzel",
-    serif;
+    "Cinzel", serif;
 
   font-size:
-    1.1rem;
+    1.15rem;
 
   font-weight:
     600;
+
+}
+
+
+.theme-card p {
+
+  margin:
+    0;
+
+  color:
+    var(--warm-gray);
+
+  font-family:
+    "Cormorant Garamond", serif;
+
+  font-size:
+    1.2rem;
+
+  line-height:
+    1.7;
+
+}
+
+
+/* ======================================================
+   CONTINUE STORY
+====================================================== */
+
+.continue-story {
+
+  padding:
+    100px 20px;
+
+  background:
+    var(--paper);
+
+  text-align:
+    center;
+
+}
+
+
+.preview-container {
+
+  width:
+    min(750px, 100%);
+
+  margin:
+    0 auto;
+
+}
+
+
+.continue-story h2 {
+
+  margin:
+    0;
+
+  color:
+    var(--navy);
+
+  font-family:
+    "Cinzel", serif;
+
+  font-size:
+    clamp(2rem, 5vw, 3.5rem);
+
+  font-weight:
+    600;
+
+  line-height:
+    1.3;
+
+}
+
+
+.continue-story p:last-of-type {
+
+  margin:
+    0 auto 35px;
+
+  color:
+    var(--warm-gray);
+
+  font-family:
+    "Cormorant Garamond", serif;
+
+  font-size:
+    1.35rem;
+
+  line-height:
+    1.75;
+
+}
+
+
+/* ======================================================
+   AUTHOR HERO
+====================================================== */
+
+.author-hero {
+
+  padding:
+    110px 20px 100px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--navy-deep),
+      var(--navy)
+    );
+
+  color:
+    var(--white);
+
+  text-align:
+    center;
+
+}
+
+
+.author-hero-content {
+
+  width:
+    min(850px, 100%);
+
+  margin:
+    0 auto;
+
+}
+
+
+.author-hero .section-eyebrow {
 
   color:
     var(--gold-light);
@@ -913,99 +964,178 @@ a {
 }
 
 
-.theme-card p {
-
-  font-family:
-    "Cormorant Garamond",
-    serif;
-
-  font-size:
-    1.25rem;
-
-  line-height:
-    1.65;
-
-  color:
-    var(--cream);
-
-}
-
-
-/* =========================================================
-   CONTINUE STORY
-========================================================= */
-
-.continue-story {
-
-  padding:
-    7rem 0;
-
-  background:
-    linear-gradient(
-      180deg,
-      var(--navy-soft),
-      var(--navy-deep)
-    );
-
-}
-
-
-.continue-story h2 {
-
-  font-family:
-    "Cormorant Garamond",
-    serif;
-
-  font-size:
-    clamp(2.7rem, 5vw, 4.2rem);
-
-  font-weight:
-    500;
-
-  line-height:
-    1.1;
-
-  color:
-    var(--ivory);
-
-}
-
-
-.continue-story p:not(.section-eyebrow) {
-
-  max-width:
-    700px;
+.author-hero h1 {
 
   margin:
-    0 auto 2.5rem;
-
-  font-family:
-    "Cormorant Garamond",
-    serif;
-
-  font-size:
-    1.35rem;
-
-  line-height:
-    1.7;
+    0;
 
   color:
-    var(--cream);
+    var(--white);
+
+  font-family:
+    "Cinzel", serif;
+
+  font-size:
+    clamp(2.6rem, 6vw, 5rem);
+
+  font-weight:
+    600;
+
+  line-height:
+    1.15;
 
 }
 
 
-/* =========================================================
-   FOOTER
-========================================================= */
+.author-hero-description {
 
-.site-footer {
+  width:
+    min(680px, 100%);
+
+  margin:
+    0 auto;
+
+  color:
+    rgba(255, 255, 255, 0.82);
+
+  font-family:
+    "Cormorant Garamond", serif;
+
+  font-size:
+    1.45rem;
+
+  font-style:
+    italic;
+
+}
+
+
+/* ======================================================
+   AUTHOR PAGE
+====================================================== */
+
+.author-page {
 
   padding:
-    4rem 0;
+    100px 20px 0;
 
   background:
-    #05080c;
+    var(--paper);
+
+}
+
+
+.author-container {
+
+  width:
+    min(850px, 100%);
+
+  margin:
+    0 auto;
+
+}
+
+
+.author-content {
+
+  color:
+    var(--slate);
+
+  font-family:
+    "Cormorant Garamond", serif;
+
+  font-size:
+    1.4rem;
+
+  line-height:
+    1.85;
+
+}
+
+
+.author-content p {
+
+  margin:
+    0 0 32px;
+
+}
+
+
+.author-opening {
+
+  color:
+    var(--navy);
+
+  font-size:
+    1.7rem;
+
+  font-weight:
+    600;
+
+}
+
+
+/* ======================================================
+   AUTHOR QUOTE
+====================================================== */
+
+.author-quote {
+
+  margin:
+    65px 0;
+
+  padding:
+    45px 50px;
+
+  border-top:
+    2px solid var(--gold);
+
+  border-bottom:
+    2px solid var(--gold);
+
+  text-align:
+    center;
+
+}
+
+
+.author-quote p {
+
+  margin:
+    0;
+
+  color:
+    var(--navy);
+
+  font-family:
+    "Cormorant Garamond", serif;
+
+  font-size:
+    clamp(1.7rem, 3vw, 2.35rem);
+
+  font-style:
+    italic;
+
+  line-height:
+    1.4;
+
+}
+
+
+/* ======================================================
+   FEATURED BOOK
+====================================================== */
+
+.author-book-section {
+
+  margin-top:
+    95px;
+
+  padding:
+    80px 20px;
+
+  background:
+    var(--cream);
 
   border-top:
     1px solid var(--border);
@@ -1013,28 +1143,560 @@ a {
 }
 
 
-.footer-content {
+.author-book-grid {
 
   width:
-    min(1100px, 90%);
+    min(950px, 100%);
 
   margin:
     0 auto;
 
   display:
-    flex;
+    grid;
 
-  flex-direction:
-    column;
+  grid-template-columns:
+    minmax(220px, 300px)
+    minmax(0, 1fr);
 
   align-items:
     center;
 
+  gap:
+    75px;
+
+}
+
+
+.author-book-cover {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+}
+
+
+.author-book-cover img {
+
+  width:
+    100%;
+
+  max-width:
+    290px;
+
+  border:
+    1px solid rgba(185, 154, 99, 0.45);
+
+  box-shadow:
+    0 28px 60px rgba(0, 0, 0, 0.24);
+
+}
+
+
+.author-book-details {
+
+  text-align:
+    left;
+
+}
+
+
+.author-book-details h2 {
+
+  margin:
+    0;
+
+  color:
+    var(--navy);
+
+  font-family:
+    "Cinzel", serif;
+
+  font-size:
+    clamp(1.8rem, 4vw, 2.9rem);
+
+  font-weight:
+    600;
+
+  line-height:
+    1.3;
+
+}
+
+
+.author-book-details .section-divider {
+
+  margin:
+    28px 0;
+
+}
+
+
+.author-book-details p:last-of-type {
+
+  margin:
+    0 0 35px;
+
+  color:
+    var(--warm-gray);
+
+  font-family:
+    "Cormorant Garamond", serif;
+
+  font-size:
+    1.35rem;
+
+}
+
+
+/* ======================================================
+   LEGAL PAGE HERO
+====================================================== */
+
+.legal-hero {
+
+  padding:
+    105px 20px 95px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--navy-deep),
+      var(--navy)
+    );
+
+  color:
+    var(--white);
+
   text-align:
     center;
 
+}
+
+
+.legal-hero-content {
+
+  width:
+    min(820px, 100%);
+
+  margin:
+    0 auto;
+
+}
+
+
+.legal-hero .section-eyebrow {
+
+  color:
+    var(--gold-light);
+
+}
+
+
+.legal-hero h1 {
+
+  margin:
+    0;
+
+  color:
+    var(--white);
+
+  font-family:
+    "Cinzel", serif;
+
+  font-size:
+    clamp(2.4rem, 6vw, 4.8rem);
+
+  font-weight:
+    600;
+
+  line-height:
+    1.2;
+
+}
+
+
+.legal-hero-description {
+
+  width:
+    min(680px, 100%);
+
+  margin:
+    0 auto;
+
+  color:
+    rgba(255, 255, 255, 0.82);
+
+  font-family:
+    "Cormorant Garamond", serif;
+
+  font-size:
+    1.35rem;
+
+  font-style:
+    italic;
+
+}
+
+
+/* ======================================================
+   LEGAL PAGE
+====================================================== */
+
+.legal-page {
+
+  padding:
+    95px 20px 110px;
+
+  background:
+    var(--paper);
+
+}
+
+
+.legal-container {
+
+  width:
+    min(850px, 100%);
+
+  margin:
+    0 auto;
+
+}
+
+
+.legal-content {
+
+  color:
+    var(--slate);
+
+  font-family:
+    "Cormorant Garamond", serif;
+
+  font-size:
+    1.3rem;
+
+  line-height:
+    1.8;
+
+}
+
+
+.legal-content > p {
+
+  margin:
+    0 0 30px;
+
+}
+
+
+.legal-opening {
+
+  color:
+    var(--navy);
+
+  font-size:
+    1.6rem;
+
+  font-weight:
+    600;
+
+}
+
+
+.legal-content h2 {
+
+  margin:
+    65px 0 22px;
+
+  color:
+    var(--navy);
+
+  font-family:
+    "Cinzel", serif;
+
+  font-size:
+    clamp(1.45rem, 3vw, 2rem);
+
+  font-weight:
+    600;
+
+}
+
+
+.legal-content h2:first-child {
+
+  margin-top:
+    0;
+
+}
+
+
+.legal-content h3 {
+
+  margin:
+    42px 0 16px;
+
+  color:
+    var(--navy);
+
+  font-family:
+    "Cinzel", serif;
+
+  font-size:
+    1.2rem;
+
+}
+
+
+.legal-content ul {
+
+  margin:
+    0 0 30px;
+
+  padding-left:
+    28px;
+
+}
+
+
+.legal-content li {
+
+  margin-bottom:
+    12px;
+
+}
+
+
+.legal-content strong {
+
+  color:
+    var(--navy);
+
+}
+
+
+/* ======================================================
+   LEGAL NOTICE
+====================================================== */
+
+.legal-notice {
+
+  margin:
+    45px 0;
+
+  padding:
+    30px 35px;
+
+  background:
+    var(--cream);
+
+  border-left:
+    3px solid var(--gold);
+
+}
+
+
+.legal-notice p {
+
+  margin:
+    0;
+
+}
+
+
+.legal-notice p + p {
+
+  margin-top:
+    15px;
+
+}
+
+
+/* ======================================================
+   LEGAL INFORMATION
+====================================================== */
+
+.legal-information {
+
+  margin:
+    40px 0;
+
+  padding:
+    35px;
+
+  background:
+    var(--white);
+
+  border:
+    1px solid var(--border);
+
+  box-shadow:
+    var(--shadow);
+
+}
+
+
+.legal-information h2,
+
+.legal-information h3 {
+
+  margin-top:
+    0;
+
+}
+
+
+.legal-information p:last-child {
+
+  margin-bottom:
+    0;
+
+}
+
+
+/* ======================================================
+   LEGAL META
+====================================================== */
+
+.legal-meta {
+
+  margin:
+    0 0 50px;
+
+  padding-bottom:
+    25px;
+
+  border-bottom:
+    1px solid var(--border);
+
+  color:
+    var(--warm-gray);
+
+  font-family:
+    "Inter", sans-serif;
+
+  font-size:
+    0.82rem;
+
+}
+
+
+/* ======================================================
+   LEGAL NAVIGATION
+====================================================== */
+
+.legal-navigation {
+
+  display:
+    flex;
+
+  flex-wrap:
+    wrap;
+
+  justify-content:
+    space-between;
+
   gap:
-    1.5rem;
+    20px;
+
+  margin-top:
+    80px;
+
+  padding-top:
+    35px;
+
+  border-top:
+    1px solid var(--border);
+
+}
+
+
+.legal-navigation a {
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  min-height:
+    48px;
+
+  padding:
+    12px 20px;
+
+  color:
+    var(--navy);
+
+  border:
+    1px solid var(--border);
+
+  font-size:
+    0.8rem;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.05em;
+
+  text-transform:
+    uppercase;
+
+}
+
+
+.legal-navigation a:hover {
+
+  background:
+    var(--navy);
+
+  color:
+    var(--white);
+
+  border-color:
+    var(--navy);
+
+}
+
+
+/* ======================================================
+   FOOTER
+====================================================== */
+
+.site-footer {
+
+  padding:
+    70px 20px 38px;
+
+  background:
+    var(--navy-deep);
+
+  color:
+    var(--white);
+
+}
+
+
+.footer-content {
+
+  width:
+    min(1100px, 100%);
+
+  margin:
+    0 auto;
+
+  text-align:
+    center;
 
 }
 
@@ -1048,7 +1710,10 @@ a {
     column;
 
   gap:
-    0.35rem;
+    8px;
+
+  margin-bottom:
+    32px;
 
 }
 
@@ -1056,42 +1721,33 @@ a {
 .footer-brand strong {
 
   font-family:
-    "Cinzel",
-    serif;
+    "Cinzel", serif;
 
   font-size:
-    1rem;
+    1.05rem;
 
   letter-spacing:
-    0.1em;
-
-  color:
-    var(--gold-light);
+    0.08em;
 
 }
 
 
 .footer-brand span {
 
+  color:
+    var(--gold-light);
+
   font-family:
-    "Cormorant Garamond",
-    serif;
+    "Cormorant Garamond", serif;
 
   font-size:
-    1.2rem;
+    1.1rem;
 
   font-style:
     italic;
 
-  color:
-    var(--cream);
-
 }
 
-
-/* =========================================================
-   FOOTER NAVIGATION
-========================================================= */
 
 .footer-links,
 
@@ -1107,66 +1763,28 @@ a {
     center;
 
   gap:
-    1.25rem;
+    22px;
+
+  margin:
+    20px 0;
 
 }
 
 
-.footer-links a {
-
-  font-size:
-    0.75rem;
-
-  font-weight:
-    600;
-
-  letter-spacing:
-    0.1em;
-
-  text-transform:
-    uppercase;
-
-  color:
-    var(--cream);
-
-  transition:
-    color 0.25s ease;
-
-}
-
-
-.footer-links a:hover {
-
-  color:
-    var(--gold-light);
-
-}
-
-
-.footer-legal {
-
-  padding-top:
-    1rem;
-
-  border-top:
-    1px solid rgba(201, 164, 92, 0.15);
-
-}
-
+.footer-links a,
 
 .footer-legal a {
 
-  font-size:
-    0.78rem;
-
   color:
-    var(--warm-gray);
+    rgba(255, 255, 255, 0.72);
 
-  transition:
-    color 0.25s ease;
+  font-size:
+    0.82rem;
 
 }
 
+
+.footer-links a:hover,
 
 .footer-legal a:hover {
 
@@ -1178,38 +1796,57 @@ a {
 
 .footer-author {
 
-  font-family:
-    "Cormorant Garamond",
-    serif;
-
-  font-size:
-    1.2rem;
-
-  font-style:
-    italic;
+  margin:
+    32px 0 8px;
 
   color:
-    var(--cream);
+    rgba(255, 255, 255, 0.75);
+
+  font-family:
+    "Cormorant Garamond", serif;
+
+  font-size:
+    1.1rem;
 
 }
 
 
 .footer-copyright {
 
-  font-size:
-    0.75rem;
+  margin:
+    0;
 
   color:
-    var(--muted);
+    rgba(255, 255, 255, 0.48);
+
+  font-size:
+    0.75rem;
 
 }
 
 
-/* =========================================================
-   MOBILE
-========================================================= */
+/* ======================================================
+   TABLET
+====================================================== */
 
-@media (max-width: 800px) {
+@media screen and (max-width: 1000px) {
+
+
+  .themes-grid {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+  }
+
+}
+
+
+/* ======================================================
+   MOBILE
+====================================================== */
+
+@media screen and (max-width: 800px) {
 
 
   .nav-container {
@@ -1223,21 +1860,18 @@ a {
   .menu-toggle {
 
     display:
-      flex;
+      block;
 
   }
 
 
   .site-navigation {
 
-    display:
-      none;
-
     position:
       absolute;
 
     top:
-      100%;
+      76px;
 
     left:
       0;
@@ -1245,20 +1879,29 @@ a {
     width:
       100%;
 
-    padding:
-      1.5rem;
+    display:
+      none;
 
     flex-direction:
       column;
 
     align-items:
-      flex-start;
+      stretch;
+
+    gap:
+      0;
+
+    padding:
+      15px 5% 25px;
 
     background:
-      var(--navy);
+      var(--paper);
 
     border-bottom:
       1px solid var(--border);
+
+    box-shadow:
+      0 15px 30px rgba(0, 0, 0, 0.08);
 
   }
 
@@ -1273,11 +1916,8 @@ a {
 
   .site-navigation a {
 
-    width:
-      100%;
-
     padding:
-      0.75rem 0;
+      14px 0;
 
   }
 
@@ -1297,62 +1937,154 @@ a {
   .continue-story {
 
     padding:
-      5rem 0;
+      75px 20px;
 
   }
 
 
-  .themes-grid {
+  .author-hero,
+
+  .legal-hero {
+
+    padding:
+      80px 20px 75px;
+
+  }
+
+
+  .author-page {
+
+    padding-top:
+      75px;
+
+  }
+
+
+  .legal-page {
+
+    padding:
+      70px 20px 85px;
+
+  }
+
+
+  .author-content {
+
+    font-size:
+      1.25rem;
+
+  }
+
+
+  .legal-content {
+
+    font-size:
+      1.2rem;
+
+  }
+
+
+  .author-opening {
+
+    font-size:
+      1.48rem;
+
+  }
+
+
+  .legal-opening {
+
+    font-size:
+      1.4rem;
+
+  }
+
+
+  .author-quote,
+
+  .featured-question {
+
+    margin:
+      45px 0;
+
+    padding:
+      32px 25px;
+
+  }
+
+
+  .author-book-section {
+
+    margin-top:
+      75px;
+
+    padding:
+      70px 20px;
+
+  }
+
+
+  .author-book-grid {
 
     grid-template-columns:
       1fr;
 
-  }
-
-
-  .book-actions {
-
-    flex-direction:
-      column;
-
-    align-items:
-      stretch;
+    gap:
+      50px;
 
   }
 
 
-  .primary-button,
+  .author-book-details {
 
-  .secondary-button {
-
-    width:
-      100%;
+    text-align:
+      center;
 
   }
 
+
+  .author-book-details .section-divider {
+
+    margin:
+      28px auto;
+
+  }
+
+
+  .legal-notice,
+
+  .legal-information {
+
+    padding:
+      28px 25px;
+
+  }
+
+
+  .legal-navigation {
+
+    margin-top:
+      60px;
+
+  }
 
 }
 
 
-/* =========================================================
+/* ======================================================
    SMALL MOBILE
-========================================================= */
+====================================================== */
 
-@media (max-width: 500px) {
-
-
-  .nav-container {
-
-    width:
-      92%;
-
-  }
+@media screen and (max-width: 500px) {
 
 
   .brand-main {
 
     font-size:
       0.82rem;
+
+    letter-spacing:
+      0.05em;
 
   }
 
@@ -1365,56 +2097,165 @@ a {
   }
 
 
-  .book-banner img {
-
-    width:
-      100%;
-
-    min-height:
-      0;
-
-    object-fit:
-      contain;
-
-  }
-
-
-  .book-overview h1 {
+  .book-overview-content {
 
     font-size:
-      2.7rem;
+      1.15rem;
 
   }
 
 
-  .book-overview-content p {
+  .book-overview-content p:first-child {
 
     font-size:
-      1.2rem;
+      1.4rem;
 
   }
 
+
+  .themes-grid {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+
+  .author-hero,
+
+  .legal-hero {
+
+    padding:
+      70px 20px;
+
+  }
+
+
+  .author-hero h1,
+
+  .legal-hero h1 {
+
+    font-size:
+      2.3rem;
+
+  }
+
+
+  .author-hero-description,
+
+  .legal-hero-description {
+
+    font-size:
+      1.18rem;
+
+  }
+
+
+  .author-page {
+
+    padding-top:
+      60px;
+
+  }
+
+
+  .legal-page {
+
+    padding:
+      60px 20px 75px;
+
+  }
+
+
+  .author-content,
+
+  .legal-content {
+
+    font-size:
+      1.12rem;
+
+    line-height:
+      1.75;
+
+  }
+
+
+  .author-opening,
+
+  .legal-opening {
+
+    font-size:
+      1.3rem;
+
+  }
+
+
+  .author-quote,
 
   .featured-question {
 
     padding:
-      1.75rem 1.25rem;
+      28px 20px;
 
   }
 
+
+  .author-quote p,
 
   .featured-question p {
 
     font-size:
-      1.65rem;
+      1.55rem;
 
   }
 
 
-  .theme-card {
+  .author-book-section {
 
     padding:
-      1.75rem;
+      55px 20px;
+
+  }
+
+
+  .author-book-cover img {
+
+    max-width:
+      220px;
+
+  }
+
+
+  .author-book-details p:last-of-type {
+
+    font-size:
+      1.18rem;
+
+  }
+
+
+  .legal-notice,
+
+  .legal-information {
+
+    padding:
+      25px 20px;
+
+  }
+
+
+  .legal-navigation {
+
+    flex-direction:
+      column;
+
+  }
+
+
+  .legal-navigation a {
+
+    width:
+      100%;
 
   }
 
@@ -1424,1174 +2265,8 @@ a {
   .footer-legal {
 
     gap:
-      0.9rem 1rem;
+      14px;
 
   }
-
-
-}
-
-/* =========================================================
-   404 PAGE
-========================================================= */
-
-.not-found-page {
-  position: relative;
-  min-height: 72vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 100px 24px;
-
-  background:
-    radial-gradient(
-      circle at top center,
-      rgba(201, 164, 93, 0.10),
-      transparent 40%
-    ),
-    linear-gradient(
-      180deg,
-      #101b2b 0%,
-      #0b1420 100%
-    );
-
-  overflow: hidden;
-}
-
-
-/* SUBTLE GOLD GLOW */
-
-.not-found-page::before {
-  content: "";
-
-  position: absolute;
-
-  top: 0;
-  left: 50%;
-
-  width: 700px;
-  height: 700px;
-
-  transform: translateX(-50%);
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(200, 164, 93, 0.12) 0%,
-      rgba(200, 164, 93, 0.04) 35%,
-      transparent 70%
-    );
-
-  pointer-events: none;
-}
-
-
-/* CONTENT */
-
-.not-found-container {
-  position: relative;
-
-  width: 100%;
-  max-width: 760px;
-
-  text-align: center;
-
-  z-index: 1;
-}
-
-
-/* EYEBROW */
-
-.not-found-container .section-eyebrow {
-  margin-bottom: 24px;
-
-  font-family: "Cinzel", serif;
-
-  font-size: 0.75rem;
-
-  font-weight: 500;
-
-  letter-spacing: 0.28em;
-
-  text-transform: uppercase;
-
-  color: #c8a45d;
-}
-
-
-/* 404 NUMBER */
-
-.not-found-number {
-  margin-bottom: 20px;
-
-  font-family: "Cinzel", serif;
-
-  font-size: clamp(6rem, 18vw, 11rem);
-
-  font-weight: 600;
-
-  line-height: 0.85;
-
-  letter-spacing: 0.04em;
-
-  color: #c8a45d;
-
-  text-shadow:
-    0 8px 30px rgba(0, 0, 0, 0.35);
-}
-
-
-/* TITLE */
-
-.not-found-container h1 {
-  margin: 0 0 24px;
-
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: clamp(2.8rem, 7vw, 5rem);
-
-  font-weight: 600;
-
-  line-height: 1;
-
-  color: #ffffff;
-}
-
-
-/* DIVIDER */
-
-.not-found-container .section-divider {
-  width: 110px;
-  height: 1px;
-
-  margin: 30px auto;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      #c8a45d,
-      transparent
-    );
-}
-
-
-/* TEXT */
-
-.not-found-container > p {
-  max-width: 620px;
-
-  margin:
-    0 auto
-    16px;
-
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: 1.4rem;
-
-  line-height: 1.65;
-
-  color: rgba(255, 255, 255, 0.78);
-}
-
-
-.not-found-message {
-  margin-top: 28px !important;
-
-  color: rgba(255, 255, 255, 0.92) !important;
-}
-
-
-/* BUTTONS */
-
-.not-found-actions {
-  display: flex;
-
-  flex-wrap: wrap;
-
-  justify-content: center;
-
-  gap: 16px;
-
-  margin-top: 40px;
-}
-
-
-.not-found-actions a {
-  min-width: 190px;
-
-  text-align: center;
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media screen and (max-width: 700px) {
-
-  .not-found-page {
-    min-height: 68vh;
-
-    padding:
-      80px 20px;
-  }
-
-
-  .not-found-number {
-    font-size: 6.5rem;
-  }
-
-
-  .not-found-container h1 {
-    font-size: 3rem;
-  }
-
-
-  .not-found-container > p {
-    font-size: 1.25rem;
-  }
-
-
-  .not-found-actions {
-    flex-direction: column;
-
-    width: 100%;
-  }
-
-
-  .not-found-actions a {
-    width: 100%;
-  }
-
-}
-
-/* ======================================================
-   LEGAL PAGES
-   Copyright | Terms of Use | Privacy
-====================================================== */
-
-
-/* ======================================================
-   LEGAL HERO
-====================================================== */
-
-.legal-hero {
-
-  padding: 105px 20px 95px;
-
-  background:
-    linear-gradient(
-      135deg,
-      var(--navy-deep),
-      var(--navy)
-    );
-
-  color: var(--white);
-
-  text-align: center;
-
-}
-
-
-.legal-hero-content {
-
-  width: min(850px, 100%);
-
-  margin: 0 auto;
-
-}
-
-
-.legal-hero .section-eyebrow {
-
-  margin-bottom: 18px;
-
-}
-
-
-.legal-hero h1 {
-
-  margin: 0;
-
-  color: var(--white);
-
-  font-family: "Cinzel", serif;
-
-  font-size: clamp(2.3rem, 6vw, 4.5rem);
-
-  font-weight: 600;
-
-  line-height: 1.2;
-
-  letter-spacing: 0.03em;
-
-}
-
-
-.legal-hero .section-divider {
-
-  margin: 30px auto;
-
-}
-
-
-.legal-hero-description {
-
-  width: min(650px, 100%);
-
-  margin: 0 auto;
-
-  color: rgba(255, 255, 255, 0.82);
-
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: 1.35rem;
-
-  font-style: italic;
-
-  line-height: 1.65;
-
-}
-
-
-/* ======================================================
-   LEGAL PAGE CONTENT
-====================================================== */
-
-.legal-page {
-
-  padding: 95px 20px 110px;
-
-  background: var(--paper);
-
-}
-
-
-.legal-container {
-
-  width: min(850px, 100%);
-
-  margin: 0 auto;
-
-}
-
-
-.legal-content {
-
-  color: var(--slate);
-
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: 1.3rem;
-
-  line-height: 1.85;
-
-}
-
-
-.legal-content section {
-
-  margin-bottom: 60px;
-
-}
-
-
-.legal-content section:last-child {
-
-  margin-bottom: 0;
-
-}
-
-
-.legal-content h2 {
-
-  margin: 0 0 22px;
-
-  color: var(--navy);
-
-  font-family: "Cinzel", serif;
-
-  font-size: clamp(1.4rem, 3vw, 2rem);
-
-  font-weight: 600;
-
-  line-height: 1.35;
-
-}
-
-
-.legal-content h3 {
-
-  margin: 35px 0 15px;
-
-  color: var(--navy);
-
-  font-family: "Cinzel", serif;
-
-  font-size: 1.1rem;
-
-  font-weight: 600;
-
-  letter-spacing: 0.03em;
-
-}
-
-
-.legal-content p {
-
-  margin: 0 0 25px;
-
-}
-
-
-.legal-content p:last-child {
-
-  margin-bottom: 0;
-
-}
-
-
-/* ======================================================
-   LEGAL OPENING TEXT
-====================================================== */
-
-.legal-opening {
-
-  margin-bottom: 60px !important;
-
-  color: var(--navy);
-
-  font-size: 1.55rem;
-
-  font-weight: 600;
-
-  line-height: 1.65;
-
-}
-
-
-/* ======================================================
-   LEGAL LISTS
-====================================================== */
-
-.legal-content ul,
-
-.legal-content ol {
-
-  margin: 25px 0 30px;
-
-  padding-left: 30px;
-
-}
-
-
-.legal-content li {
-
-  margin-bottom: 14px;
-
-  padding-left: 5px;
-
-}
-
-
-.legal-content li::marker {
-
-  color: var(--gold);
-
-}
-
-
-/* ======================================================
-   LEGAL INFORMATION BOX
-====================================================== */
-
-.legal-note {
-
-  margin: 45px 0;
-
-  padding: 30px 35px;
-
-  background: var(--cream);
-
-  border-left: 3px solid var(--gold);
-
-}
-
-
-.legal-note p {
-
-  margin: 0;
-
-  color: var(--slate);
-
-}
-
-
-/* ======================================================
-   LEGAL DIVIDER
-====================================================== */
-
-.legal-section-divider {
-
-  width: 100%;
-
-  height: 1px;
-
-  margin: 55px 0;
-
-  background: var(--border);
-
-}
-
-
-/* ======================================================
-   CONTACT INFORMATION
-====================================================== */
-
-.legal-contact {
-
-  margin-top: 40px;
-
-  padding: 35px;
-
-  background: var(--cream);
-
-  border: 1px solid var(--border);
-
-}
-
-
-.legal-contact h2 {
-
-  margin-bottom: 15px;
-
-}
-
-
-.legal-contact p {
-
-  margin-bottom: 10px;
-
-}
-
-
-.legal-contact a {
-
-  color: var(--navy);
-
-  text-decoration: underline;
-
-  text-decoration-color: var(--gold);
-
-  text-decoration-thickness: 1px;
-
-  text-underline-offset: 4px;
-
-}
-
-
-.legal-contact a:hover {
-
-  color: var(--gold);
-
-}
-
-
-/* ======================================================
-   LEGAL PAGE DATE
-====================================================== */
-
-.legal-updated {
-
-  margin-top: 20px;
-
-  color: var(--warm-gray);
-
-  font-family: "Inter", sans-serif;
-
-  font-size: 0.78rem;
-
-  letter-spacing: 0.03em;
-
-}
-
-
-/* ======================================================
-   RESPONSIVE LEGAL PAGES
-====================================================== */
-
-@media screen and (max-width: 800px) {
-
-
-  .legal-hero {
-
-    padding: 80px 20px 75px;
-
-  }
-
-
-  .legal-page {
-
-    padding: 70px 20px 85px;
-
-  }
-
-
-  .legal-content {
-
-    font-size: 1.2rem;
-
-  }
-
-
-  .legal-content section {
-
-    margin-bottom: 50px;
-
-  }
-
-
-  .legal-opening {
-
-    margin-bottom: 45px !important;
-
-    font-size: 1.4rem;
-
-  }
-
-
-  .legal-note {
-
-    padding: 25px;
-
-  }
-
-
-  .legal-contact {
-
-    padding: 25px;
-
-  }
-
-}
-
-
-@media screen and (max-width: 500px) {
-
-
-  .legal-hero h1 {
-
-    font-size: 2.2rem;
-
-  }
-
-
-  .legal-hero-description {
-
-    font-size: 1.2rem;
-
-  }
-
-
-  .legal-content {
-
-    font-size: 1.1rem;
-
-    line-height: 1.75;
-
-  }
-
-
-  .legal-opening {
-
-    font-size: 1.3rem;
-
-  }
-
-
-  .legal-content ul,
-
-  .legal-content ol {
-
-    padding-left: 22px;
-
-  }
-
-
-  .legal-note {
-
-    padding: 22px 20px;
-
-  }
-
-
-  .legal-contact {
-
-    padding: 22px 20px;
-
-  }
-
-}
-
-
-/* ======================================================
-   AUTHOR PAGE
-====================================================== */
-
-
-/* ======================================================
-   AUTHOR HERO
-====================================================== */
-
-.author-hero {
-
-  padding: 105px 20px 95px;
-
-  background:
-    linear-gradient(
-      135deg,
-      var(--navy-deep),
-      var(--navy)
-    );
-
-  color: var(--white);
-
-  text-align: center;
-
-}
-
-
-.author-hero-content {
-
-  width: min(850px, 100%);
-
-  margin: 0 auto;
-
-}
-
-
-.author-hero .section-eyebrow {
-
-  margin-bottom: 18px;
-
-}
-
-
-.author-hero h1 {
-
-  margin: 0;
-
-  color: var(--white);
-
-  font-family: "Cinzel", serif;
-
-  font-size: clamp(2.5rem, 6vw, 4.8rem);
-
-  font-weight: 600;
-
-  line-height: 1.15;
-
-  letter-spacing: 0.03em;
-
-}
-
-
-.author-hero .section-divider {
-
-  margin: 30px auto;
-
-}
-
-
-.author-hero-description {
-
-  width: min(680px, 100%);
-
-  margin: 0 auto;
-
-  color: rgba(255, 255, 255, 0.82);
-
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: 1.4rem;
-
-  font-style: italic;
-
-  line-height: 1.65;
-
-}
-
-
-/* ======================================================
-   AUTHOR PAGE CONTENT
-====================================================== */
-
-.author-page {
-
-  padding: 95px 20px 110px;
-
-  background: var(--paper);
-
-}
-
-
-.author-container {
-
-  width: min(900px, 100%);
-
-  margin: 0 auto;
-
-}
-
-
-.author-content {
-
-  color: var(--slate);
-
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: 1.35rem;
-
-  line-height: 1.85;
-
-}
-
-
-.author-content p {
-
-  margin: 0 0 30px;
-
-}
-
-
-.author-opening {
-
-  color: var(--navy);
-
-  font-size: 1.65rem;
-
-  font-weight: 600;
-
-  line-height: 1.65;
-
-}
-
-
-/* ======================================================
-   AUTHOR QUOTE
-====================================================== */
-
-.author-quote {
-
-  margin: 60px 0;
-
-  padding: 42px 45px;
-
-  border-top: 2px solid var(--gold);
-
-  border-bottom: 2px solid var(--gold);
-
-  text-align: center;
-
-}
-
-
-.author-quote p {
-
-  margin: 0;
-
-  color: var(--navy);
-
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: clamp(1.7rem, 3vw, 2.3rem);
-
-  font-style: italic;
-
-  font-weight: 500;
-
-  line-height: 1.4;
-
-}
-
-
-/* ======================================================
-   AUTHOR BOOK SECTION
-====================================================== */
-
-.author-book-section {
-
-  margin-top: 90px;
-
-  padding: 70px 50px;
-
-  background: var(--cream);
-
-  border: 1px solid var(--border);
-
-}
-
-
-.author-book-grid {
-
-  width: min(950px, 100%);
-
-  margin: 0 auto;
-
-  display: grid;
-
-  grid-template-columns: minmax(220px, 300px) 1fr;
-
-  align-items: center;
-
-  gap: 70px;
-
-}
-
-
-/* ======================================================
-   BOOK COVER
-====================================================== */
-
-.author-book-cover {
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-}
-
-
-.author-book-cover img {
-
-  display: block;
-
-  width: 100%;
-
-  max-width: 290px;
-
-  height: auto;
-
-  border: 1px solid rgba(185, 154, 99, 0.4);
-
-  box-shadow:
-    0 25px 55px rgba(0, 0, 0, 0.22);
-
-}
-
-
-/* ======================================================
-   BOOK INFORMATION
-====================================================== */
-
-.author-book-details {
-
-  text-align: left;
-
-}
-
-
-.author-book-details .section-eyebrow {
-
-  margin-bottom: 18px;
-
-}
-
-
-.author-book-details h2 {
-
-  margin: 0;
-
-  color: var(--navy);
-
-  font-family: "Cinzel", serif;
-
-  font-size: clamp(1.7rem, 4vw, 2.8rem);
-
-  font-weight: 600;
-
-  line-height: 1.3;
-
-}
-
-
-.author-book-details .section-divider {
-
-  margin: 28px 0;
-
-}
-
-
-.author-book-details p:last-of-type {
-
-  margin: 0 0 35px;
-
-  color: var(--warm-gray);
-
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: 1.3rem;
-
-  line-height: 1.7;
-
-}
-
-
-/* ======================================================
-   AUTHOR PAGE RESPONSIVE
-====================================================== */
-
-@media screen and (max-width: 800px) {
-
-
-  .author-hero {
-
-    padding: 80px 20px 75px;
-
-  }
-
-
-  .author-page {
-
-    padding: 70px 20px 85px;
-
-  }
-
-
-  .author-content {
-
-    font-size: 1.22rem;
-
-  }
-
-
-  .author-opening {
-
-    font-size: 1.45rem;
-
-  }
-
-
-  .author-quote {
-
-    margin: 45px 0;
-
-    padding: 32px 25px;
-
-  }
-
-
-  .author-book-section {
-
-    margin-top: 65px;
-
-    padding: 60px 25px;
-
-  }
-
-
-  .author-book-grid {
-
-    grid-template-columns: 1fr;
-
-    gap: 45px;
-
-  }
-
-
-  .author-book-cover img {
-
-    max-width: 260px;
-
-  }
-
-
-  .author-book-details {
-
-    text-align: center;
-
-  }
-
-
-  .author-book-details .section-divider {
-
-    margin: 28px auto;
-
-  }
-
-
-}
-
-
-@media screen and (max-width: 500px) {
-
-
-  .author-hero h1 {
-
-    font-size: 2.3rem;
-
-  }
-
-
-  .author-hero-description {
-
-    font-size: 1.2rem;
-
-  }
-
-
-  .author-content {
-
-    font-size: 1.12rem;
-
-    line-height: 1.75;
-
-  }
-
-
-  .author-opening {
-
-    font-size: 1.3rem;
-
-  }
-
-
-  .author-quote {
-
-    padding: 28px 20px;
-
-  }
-
-
-  .author-quote p {
-
-    font-size: 1.55rem;
-
-  }
-
-
-  .author-book-section {
-
-    padding: 50px 20px;
-
-  }
-
-
-  .author-book-cover img {
-
-    max-width: 220px;
-
-  }
-
-
-  .author-book-details p:last-of-type {
-
-    font-size: 1.18rem;
-
-  }
-
 
 }
